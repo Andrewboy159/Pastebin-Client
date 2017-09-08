@@ -8,14 +8,44 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    Stage window;
+    Scene splash, main;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../../../../fxml/sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+        window = primaryStage;
+
+        Parent splashLayout = FXMLLoader.load(getClass().getResource("/fxml/splash.fxml"));
+        window.setTitle("Pastebin");
+        window.setResizable(false);
+        splash = new Scene(splashLayout, 600, 550);
+        window.setScene(splash);
+        window.show();
+
+        wait(3);
+
+
+        Parent mainLayout = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
+        window.setTitle("Pastebin");
+        window.setResizable(false);
+        main = new Scene(mainLayout, 600, 550);
+        window.setScene(main);
+
+        //Parent root = FXMLLoader.load(getClass().getResource("/fxml/splash.fxml"));
+        //primaryStage.setTitle("Pastebin");
+        //primaryStage.setScene(new Scene(root, 600, 550));
+        //primaryStage.setResizable(false);
+        //primaryStage.show();
     }
 
+
+    private void wait(int seconds) {
+        try {
+            Thread.sleep((long) seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
         launch(args);
