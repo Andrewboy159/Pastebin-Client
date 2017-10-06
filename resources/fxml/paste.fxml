@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141"
+          fx:controller="tk.andrewboy159.pastebinclient.controller.ControllerPaste">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label text="New Paste">
+                    <font>
+                        <Font name="System Bold" size="24.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <children>
+                <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="171.0" promptText="Title"/>
+                <ComboBox layoutX="14.0" layoutY="67.0" prefWidth="150.0" promptText="Syntax"/>
+            </children>
+        </Pane>
+        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <children>
+                <Button fx:id="okButton" layoutX="221.0" layoutY="84.0" mnemonicParsing="false" onAction="#paste"
+                        prefHeight="35.0" prefWidth="67.0" text="Submit"/>
+                <Button fx:id="cancelButton" layoutX="134.0" layoutY="84.0" mnemonicParsing="false" onAction="#close"
+                        prefHeight="35.0" prefWidth="67.0" text="Cancel"/>
+            </children>
+        </Pane>
+    </children>
+</GridPane>

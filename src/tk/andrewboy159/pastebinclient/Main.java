@@ -12,9 +12,18 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
 
     private Stage window;
-    private Scene splash, main;
+    private Scene main;
 
     private String key = "e327e1850a5fab998d4a8043d1898c64";
+    private String userKey;
+
+    public String getUserKey() {
+        return userKey;
+    }
+
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
+    }
 
     public String getKey() {
         return key;
@@ -24,23 +33,17 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
 
-        Parent splashLayout = FXMLLoader.load(getClass().getResource("/fxml/splash.fxml"));
-        window.setTitle("Pastebin");
-        window.setResizable(false);
         window.getIcons().add(new Image(getClass().getResourceAsStream("/images/logo.png")));
         window.initStyle(StageStyle.UNDECORATED);
-        splash = new Scene(splashLayout, 600, 550);
-        window.setScene(splash);
-        window.show();
-
-        wait(10);
-
 
         Parent mainLayout = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
+
         window.setTitle("Pastebin");
         window.setResizable(false);
+
         main = new Scene(mainLayout, 600, 550);
         window.setScene(main);
+        window.show();
     }
 
     public void closeProgram() {

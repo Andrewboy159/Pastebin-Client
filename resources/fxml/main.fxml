@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 <GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
           minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="/css/main.css"
-          xmlns="http://javafx.com/javafx/8.0.121"
+          xmlns="http://javafx.com/javafx/8.0.141"
           fx:controller="tk.andrewboy159.pastebinclient.controller.ControllerMain">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
@@ -20,7 +20,8 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
     </rowConstraints>
     <children>
-        <Button mnemonicParsing="false" style="-fx-background-color: #FFF;" text="New Paste" textAlignment="CENTER">
+        <Button mnemonicParsing="false" onAction="#pasteWindow" style="-fx-background-color: #FFF;" text="New Paste"
+                textAlignment="CENTER">
             <font>
                 <Font name="Comic Sans MS" size="24.0"/>
             </font>

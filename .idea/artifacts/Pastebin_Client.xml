@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="javafx" build-on-make="true" name="Pastebin Client">
+  <artifact type="javafx" name="Pastebin Client">
     <output-path>$USER_HOME$/Desktop</output-path>
     <properties id="javafx-properties">
       <options>
